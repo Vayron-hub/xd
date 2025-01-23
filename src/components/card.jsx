@@ -10,10 +10,10 @@ export default function BasicCard({ nombre, url }) {
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography gutterBottom sx={{ fontSize: 14 }}>
-          {nombre}
-        </Typography>
-        <Typography variant="h5" component="div">
           Cifrado
+        </Typography>
+        <Typography variant="h6" component="div">
+          {nombre}
         </Typography>
       </CardContent>
       <CardActions>
