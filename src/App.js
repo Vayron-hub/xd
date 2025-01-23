@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Simetrico from './components/Simetrico';
 import Asimetrico from './components/Asimetrico';
 import Hash from './components/Hash';
+import Mine from './components/Mine';
 
 // Componente Home con las tarjetas
 function Home() {
@@ -31,14 +32,17 @@ function Home() {
             <Grid item size={12} style={{ textAlign: 'center' }}>
               <h1 style={{ color: 'white' }}>Cifrados</h1>
             </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={3}>
                 <Card nombre="Cifrado de clave simétrica" url="/simetrico" />
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={3}>
                 <Card nombre="Cifrado de clave asimétrica" url="/asimetrico" />
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={3}>
                 <Card nombre="Cifrado de función hash" url="/hash" />
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Card nombre="Mi Cifrado de función simètrica" url="/mine" />
               </Grid>
             </Grid>
           </Box>
@@ -55,6 +59,7 @@ function App() {
         <Route path="/simetrico" element={<Simetrico />} />
         <Route path="/asimetrico" element={<Asimetrico />} />
         <Route path="/hash" element={<Hash />} />
+        <Route path="/mine" element={<Mine />} />
       </Routes>
     </Router>
   );

@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
 
-export default function Hash() {
+export default function Asimetrico() {
     return (
         <div>
             <Navbar />
@@ -22,7 +22,7 @@ export default function Hash() {
             }}>
                 <CardContent>
                     <Typography gutterBottom sx={{ fontSize: 15 }}>
-                        Cifrado de clave Hashc
+                        Mi Cifrado de clave Asimétrica
                     </Typography>
                     <label>Ingrese un mensaje</label><br />
                     <input type='text' ></input>

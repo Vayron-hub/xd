@@ -4,6 +4,8 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { Button } from '@mui/material';
+
 
 export default function Asimetrico() {
     return (
@@ -25,6 +27,7 @@ export default function Asimetrico() {
                     </Typography>
                     <label>Ingrese un mensaje</label><br />
                     <input type='text' ></input>
+                    <Button variant="contained" style={{ marginLeft: '10px' }}>Cifrar</Button>
                 </CardContent>
                 <CardActions>
 
