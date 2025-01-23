@@ -5,8 +5,20 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
+import { useState, useRef } from 'react';
+import CryptoJS from 'crypto-js';
+
 
 export default function Hash() {
+
+    const [cifrado, setCifrado] = useState('')
+    const mensajeRef = useRef(null);
+
+    const encript = () => {
+        let txtcifrado = CryptoJS.SHA256(mensajeRef).toString();
+        setCifrado(txtcifrado);
+    }
+
     return (
         <div>
             <Navbar />
@@ -25,9 +37,9 @@ export default function Hash() {
                         Cifrado de clave Hashc
                     </Typography>
                     <label>Ingrese un mensaje</label><br />
-                    <input type='text' ></input>
-                    <Button variant="contained" style={{ marginLeft: '10px' }}>Cifrar</Button>
-                </CardContent>
+                    <input type='text' ref={mensajeRef}></input>
+                    <Button onClick={encript} variant="contained" style={{ marginLeft: '10px' }}>Cifrar</Button><br />
+                    <h5>Resultado:</h5><br /><div style={{ wordBreak: 'break-word' }}>{cifrado}</div>                </CardContent>
                 <CardActions>
 
                 </CardActions>
